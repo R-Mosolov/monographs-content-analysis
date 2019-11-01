@@ -28,7 +28,7 @@ def index():
 
 @app.route('/', methods=['POST'])
 def getvalue():
-    result = calculating_result
+    result = request.form['data-field']
     return render_template('result.html', r=result)
 
 if __name__ == '__main__':
