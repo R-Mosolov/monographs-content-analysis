@@ -6,35 +6,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <table class="table container">
-      <thead>
-        <tr>
-          <th scope="col">№</th>
-          <th scope="col">('Ключевое слово', частота упоминаний)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>{{r1}}</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>{{r2}}</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>{{r3}}</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>{{r4}}</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>{{r5}}</td>
-        </tr>
-      </tbody>
-</table>
+    <header>
+        <nav class="navbar navbar-light bg-light">
+          <a class="navbar-brand" href="#" style="font-size: 18px">История гениального открытия</a>
+        </nav>
+    </header>
+    <main class="container d-flex justify-content-center flex-column" style="height: calc(100vh - 100px)">
+        <h1 class="text-center">Таблица результата</h1>
+        <table class="table mt-4 border shadow-sm">
+            <thead>
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">('Ключевое слово', частота упоминаний)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{r1}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>{{r2}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>{{r3}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>{{r4}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>{{r5}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>

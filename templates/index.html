@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form class="container d-flex justify-content-center flex-column h-100" name="monograph-text" action="." method="post">
-        <h1 class="mt-3">Контент-анализ научной монографии</h1>
-        <textarea class="data-field mt-3 rounded" name="data-field" placeholder="Вставьте текст монографии..."></textarea>
-        <input class="btn btn-success mt-3" type="submit" value="Запустить">
-    </form>
+    <header>
+        <nav class="navbar navbar-light bg-light">
+          <a class="navbar-brand" href="#" style="font-size: 18px">История гениального открытия</a>
+        </nav>
+    </header>
+    <main style="height: calc(100vh - 100px)">
+        <form class="container d-flex justify-content-center flex-column h-100"
+              name="monograph-text" action="." method="post">
+            <h1 class="mt-3">Контент-анализ научной монографии</h1>
+            <textarea class="data-field mt-3 rounded"
+                      name="data-field"
+                      placeholder="Вставьте текст монографии..."
+                      style="min-height: 250px">
+            </textarea>
+            <input class="btn btn-success mt-3" type="submit" value="Запустить">
+        </form>
+    </main>
 </body>
 </html>
