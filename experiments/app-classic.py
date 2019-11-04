@@ -11,10 +11,10 @@ for word in word_tokenize(sent):
 
 cfdist = ConditionalFreqDist((len(word), word) for word in word_tokenize(sent))
 
-print(cfdist[5])
+print(cfdist[2])
 
-from nltk.corpus import stopwords
-
-stop_words = set(stopwords.words("english"))
-
-print(stop_words)
+# from nltk.corpus import stopwords
+#
+# stop_words = set(stopwords.words("english"))
+#
+# print(stop_words)
