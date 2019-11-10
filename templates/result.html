@@ -11,9 +11,9 @@
           <a class="navbar-brand" href="#" style="font-size: 18px">История гениального открытия</a>
         </nav>
     </header>
-    <main class="container d-flex justify-content-center flex-column" style="height: calc(100vh - 100px)">
-        <h1 class="text-center">Результат контент-анализа</h1>
-        <table class="table mt-4 border shadow-sm">
+    <h1 class="text-center mt-5">Результат контент-анализа</h1>
+    <div class="container d-flex align-items-center" style="height: 70vh">
+        <table class="table mt-4 border shadow-sm w-50">
             <thead>
                 <tr>
                     <th scope="col">№</th>
@@ -24,56 +24,103 @@
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>{{w1}}</td>
-                    <td>{{f1}}</td>
+                    <td value={{w1}} id="w1">{{w1}}</td>
+                    <td value={{f1}} id="f1">{{f1}}</td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>{{w2}}</td>
-                    <td>{{f2}}</td>
+                    <td value={{w2}} id="w2">{{w2}}</td>
+                    <td value={{f2}} id="f2">{{f2}}</td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td>{{w3}}</td>
-                    <td>{{f3}}</td>
+                    <td value={{w3}} id="w3">{{w3}}</td>
+                    <td value={{f3}} id="f3">{{f3}}</td>
                 </tr>
                 <tr>
                     <th scope="row">4</th>
-                    <td>{{w4}}</td>
-                    <td>{{f4}}</td>
+                    <td value={{w4}} id="w4">{{w4}}</td>
+                    <td value={{f4}} id="f4">{{f4}}</td>
                 </tr>
                 <tr>
                     <th scope="row">5</th>
-                    <td>{{w5}}</td>
-                    <td>{{f5}}</td>
+                    <td value={{w5}} id="w5">{{w5}}</td>
+                    <td value={{f5}} id="f5">{{f5}}</td>
                 </tr>
                 <tr>
                     <th scope="row">6</th>
-                    <td>{{w6}}</td>
-                    <td>{{f6}}</td>
+                    <td value={{w6}} id="w6">{{w6}}</td>
+                    <td value={{f6}} id="f6">{{f6}}</td>
                 </tr>
                 <tr>
                     <th scope="row">7</th>
-                    <td>{{w7}}</td>
-                    <td>{{f7}}</td>
+                    <td value={{w7}} id="w7">{{w7}}</td>
+                    <td value={{f7}} id="f7">{{f7}}</td>
                 </tr>
                 <tr>
                     <th scope="row">8</th>
-                    <td>{{w8}}</td>
-                    <td>{{f8}}</td>
+                    <td value={{w8}} id="w8">{{w8}}</td>
+                    <td value={{f8}} id="f8">{{f8}}</td>
                 </tr>
                 <tr>
                     <th scope="row">9</th>
-                    <td>{{w9}}</td>
-                    <td>{{f9}}</td>
+                    <td value={{w9}} id="w9">{{w9}}</td>
+                    <td value={{f9}} id="f9">{{f9}}</td>
                 </tr>
                 <tr>
                     <th scope="row">10</th>
-                    <td>{{w10}}</td>
-                    <td>{{f10}}</td>
+                    <td value={{w10}} id="w10">{{w10}}</td>
+                    <td value={{f10}} id="f10">{{f10}}</td>
                 </tr>
             </tbody>
         </table>
-    </main>
+        <div class="chart d-flex justify-content-center w-50">
+            <div id="chartContainer" style="min-height: 400px; width: 90%;"></div>
+            <script>
+                const w1 = document.getElementById('w1').innerText;
+                const w2 = document.getElementById('w2').innerText;
+                const w3 = document.getElementById('w3').innerText;
+                const w4 = document.getElementById('w4').innerText;
+                const w5 = document.getElementById('w5').innerText;
+
+                const f1 = document.getElementById('f1').innerText;
+                const f2 = document.getElementById('f2').innerText;
+                const f3 = document.getElementById('f3').innerText;
+                const f4 = document.getElementById('f4').innerText;
+                const f5 = document.getElementById('f5').innerText;
+
+                window.onload = function() {
+
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                        theme: "light2",
+                        exportEnabled: true,
+                        animationEnabled: true,
+                        title: {
+                            text: "ТОП-5 наиболее часто встречающихся слов"
+                        },
+
+                        data: [{
+                            type: "pie",
+                            startAngle: 25,
+                            toolTipContent: "<b>{label}</b>: {y} ед.",
+                            legendText: "{label}",
+                            indexLabelFontSize: 16,
+                            indexLabel: "{label} - {y} ед.",
+                            dataPoints: [
+                                { y: f1, label: w1 },
+                                { y: f2, label: w2 },
+                                { y: f3, label: w3 },
+                                { y: f4, label: w4 },
+                                { y: f5, label: w5 }
+                            ]
+                        }]
+                    });
+
+                    chart.render();
+                }
+            </script>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </div>
+    </div>
 </body>
 </html>
