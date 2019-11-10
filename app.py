@@ -52,18 +52,31 @@ def getvalue():
 
     # 5. Return result in HTML
 
-    result1 = result[0]
-    result2 = result[1]
-    result3 = result[2]
-    result4 = result[3]
-    result5 = result[4]
-    result6 = result[5]
-    result7 = result[6]
-    result8 = result[7]
-    result9 = result[8]
-    result10 = result[9]
-    return render_template('result.html', r1=result1, r2=result2, r3=result3, r4=result4,  r5=result5,
-                           r6=result6, r7=result7, r8=result8, r9=result9,  r10=result10)
+    word1 = result[0][0]
+    word2 = result[1][0]
+    word3 = result[2][0]
+    word4 = result[3][0]
+    word5 = result[4][0]
+    word6 = result[5][0]
+    word7 = result[6][0]
+    word8 = result[7][0]
+    word9 = result[8][0]
+    word10 = result[9][0]
+
+    freq1 = result[0][1]
+    freq2 = result[1][1]
+    freq3 = result[2][1]
+    freq4 = result[3][1]
+    freq5 = result[4][1]
+    freq6 = result[5][1]
+    freq7 = result[6][1]
+    freq8 = result[7][1]
+    freq9 = result[8][1]
+    freq10 = result[9][1]
+
+    return render_template('result.html',
+       w1=word1, w2=word2, w3=word3, w4=word4, w5=word5, w6=word6, w7=word7, w8=word8, w9=word9, w10=word10,
+       f1=freq1, f2=freq2, f3=freq3, f4=freq4,  f5=freq5, f6=freq6, f7=freq7, f8=freq8, f9=freq9,  f10=freq10)
 
 
 if __name__ == '__main__':
