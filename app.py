@@ -31,17 +31,16 @@ def getvalue():
     # 3. Delete stop-words
 
     from nltk.corpus import stopwords
-    stop_words_ru = set(stopwords.words('russian'))
-    stop_words_eng = set(stopwords.words('english'))
+    stop_words = stopwords.words('russian')
+    stop_words.extend(['не', 'это', 'что', 'именно', 'эта', 'лишь', 'очень', 'либо', 'или', 'ru', 'которые',
+                       'которая', 'который', 'ибо', 'см', 'n', 'например', 'является', '1', '2', '3', '4', '5', '6',
+                       '7', '8', '9', '0', '', 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м',
+                       'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'])
 
     filtered_sent = []
 
     for w in text_without_punctuation_signs:
-        if w not in stop_words_ru:
-            filtered_sent.append(w)
-
-    for w in text_without_punctuation_signs:
-        if w not in stop_words_eng:
+        if w not in stop_words:
             filtered_sent.append(w)
 
     # 4. Calculate TOP-words
