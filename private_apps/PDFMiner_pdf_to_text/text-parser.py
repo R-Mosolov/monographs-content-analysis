@@ -1,9 +1,31 @@
 # 0. Uniting few texts
 
 all_texts = ''
-texts_arr = ['txt/Faust_Manually.txt', 'txt/Tolstoyi_L._Voyinaimir1._Voyina_I_Mir_Kniga_1.txt',
-             'txt/Tolstoyi_L._Voyinaimir2._Voyina_I_Mir_Kniga_2.txt', 'txt/Tolstoyi_L._Anna_KareninaI.txt',
-             'txt/Tolstoyi_L._Vse_Luchshie_Skazki_I_Ras.txt', 'txt/Vern_J._Tainstvennyiyi_OstrovI.txt']
+
+defoe_path = 'txt/fiction_literature/foreign/Defoe/'
+defoe = [defoe_path + 'Defo_D._Robinzonkruzo1._Robinzon_Kruzo.txt',
+         defoe_path + 'Defo_D._Robinzonkruzo2._Dalneyishie_Priklyucheniy.txt']
+
+dikkens_path = 'txt/fiction_literature/foreign/Dikkens/'
+dikkens = [dikkens_path + 'Dikkens_Ch._Holodnyiyi_Dom.txt',
+           dikkens_path + 'Dikkens_Ch._Yeksklyuzivnaya._Priklyucheniya_Olivera_Tvista.txt']
+
+vern_path = 'txt/fiction_literature/foreign/Vern/'
+vern = [vern_path + 'Vern_J._Tainstvennyiyi_OstrovI.txt',
+        vern_path + 'Vern_J._Deti_Kapitana_GrantaI.txt',
+        vern_path + 'Vern_J._Dvadcat_Tyisyach_Le_Pod_VodoyiI.txt',
+        vern_path + 'Vern_J._Pyat_Nedel_Na_Vozdushnom_Share.txt',
+        vern_path + 'Vern_J._Puteshestvie_K_Centru_Zemli.txt']
+
+turgenev = ['txt/Faust_Manually.txt']
+
+tolstoy_path = 'txt/fiction_literature/russian/Tolstoy/'
+tolstoy = [tolstoy_path + 'Tolstoyi_L._Voyinaimir1._Voyina_I_Mir_Kniga_1.txt',
+           tolstoy_path + 'Tolstoyi_L._Voyinaimir2._Voyina_I_Mir_Kniga_2.txt',
+           tolstoy_path + 'Tolstoyi_L._Anna_KareninaI.txt',
+           tolstoy_path + 'Tolstoyi_L._Vse_Luchshie_Skazki_I_Ras.txt']
+
+texts_arr = (defoe + dikkens + vern) + (turgenev + tolstoy)
 
 for text in texts_arr:
     all_texts += open(text, 'r').read().lower()
