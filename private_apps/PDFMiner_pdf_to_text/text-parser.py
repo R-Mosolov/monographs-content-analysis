@@ -1,4 +1,4 @@
-# 0. Handling few texts
+# 0. Uniting few texts
 
 all_texts = ''
 texts_arr = ['txt/Faust_Manually.txt', 'txt/Tolstoyi_L._Voyinaimir1._Voyina_I_Mir_Kniga_1.txt',
