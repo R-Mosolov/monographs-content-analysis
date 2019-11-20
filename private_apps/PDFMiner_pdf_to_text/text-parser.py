@@ -1,9 +1,12 @@
 # 0. Handling few texts
 
-text_1 = open('txt/Faust_Manually.txt', 'r').read().lower()
-text_2 = open('txt/Tolstoyi_L._Voyinaimir1._Voyina_I_Mir_Kniga_1.txt', 'r').read().lower()
+all_texts = ''
+texts_arr = ['txt/Faust_Manually.txt', 'txt/Tolstoyi_L._Voyinaimir1._Voyina_I_Mir_Kniga_1.txt',
+             'txt/Tolstoyi_L._Voyinaimir2._Voyina_I_Mir_Kniga_2.txt', 'txt/Tolstoyi_L._Anna_KareninaI.txt',
+             'txt/Tolstoyi_L._Vse_Luchshie_Skazki_I_Ras.txt', 'txt/Vern_J._Tainstvennyiyi_OstrovI.txt']
 
-all_texts = text_1 + text_2
+for text in texts_arr:
+    all_texts += open(text, 'r').read().lower()
 
 # 1. Adding the text
 
