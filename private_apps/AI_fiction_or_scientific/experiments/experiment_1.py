@@ -2,7 +2,7 @@
 from __future__ import print_function
 import os
 
-path = 'txt/fiction_literature/foreign/Vern'
+path = 'txt/fiction/foreign/Vern'
 
 files = os.listdir(path)
 for name in files:
