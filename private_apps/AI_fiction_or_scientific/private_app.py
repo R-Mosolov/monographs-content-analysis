@@ -21,19 +21,22 @@ def create_full_path(path_link):
 
 all_texts = ''
 
-defoe = create_full_path('txt/fiction/foreign/Defoe/')
-dikkens = create_full_path('txt/fiction/foreign/Dikkens/')
-vern = create_full_path('txt/fiction/foreign/Vern/')
+scientific_books = create_full_path('txt/scientific/')
 
-bulgakov = create_full_path('txt/fiction/russian/Bulgakov/')
-chehov = create_full_path('txt/fiction/russian/Chehov/')
-dostoevskiy = create_full_path('txt/fiction/russian/Dostoevskiy/')
-gogol = create_full_path('txt/fiction/russian/Gogol/')
-pushkin = create_full_path('txt/fiction/russian/Pushkin/')
-tolstoy = create_full_path('txt/fiction/russian/Tolstoy/')
-turgenev = create_full_path('txt/fiction/russian/Turgenev/')
+# defoe = create_full_path('txt/fiction/foreign/Defoe/')
+# dikkens = create_full_path('txt/fiction/foreign/Dikkens/')
+# vern = create_full_path('txt/fiction/foreign/Vern/')
+#
+# bulgakov = create_full_path('txt/fiction/russian/Bulgakov/')
+# chehov = create_full_path('txt/fiction/russian/Chehov/')
+# dostoevskiy = create_full_path('txt/fiction/russian/Dostoevskiy/')
+# gogol = create_full_path('txt/fiction/russian/Gogol/')
+# pushkin = create_full_path('txt/fiction/russian/Pushkin/')
+# tolstoy = create_full_path('txt/fiction/russian/Tolstoy/')
+# turgenev = create_full_path('txt/fiction/russian/Turgenev/')
 
-texts_arr = (defoe + dikkens + vern) + (bulgakov + chehov + dostoevskiy + gogol + pushkin + tolstoy + turgenev)
+texts_arr = scientific_books
+# texts_arr = (defoe + dikkens + vern) + (bulgakov + chehov + dostoevskiy + gogol + pushkin + tolstoy + turgenev)
 
 for text in texts_arr:
     all_texts += open(text, 'r').read().lower()
@@ -70,6 +73,7 @@ for w in text_without_punctuation_signs:
 
 fdist = FreqDist(filtered_sent)
 
-result = fdist.most_common(50)
+result = fdist.most_common(500)
 
-print(result)
+for item in result:
+    print(item)
