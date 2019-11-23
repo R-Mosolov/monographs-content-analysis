@@ -1,4 +1,5 @@
 import os
+import statistics
 from nltk.tokenize import sent_tokenize
 from nltk.tokenize import word_tokenize
 from nltk.tokenize import RegexpTokenizer
@@ -6,7 +7,7 @@ from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 
 
-# 0. Uniting few texts
+# 1. Centralizing few texts
 
 def create_full_path(path_link):
     directory_paths = os.listdir(path_link)
@@ -21,9 +22,7 @@ def create_full_path(path_link):
 
 all_texts = ''
 
-scientific_books = create_full_path('txt/scientific/')
-
-# defoe = create_full_path('txt/fiction/foreign/Defoe/')
+defoe = create_full_path('txt/fiction/foreign/Defoe/')
 # dikkens = create_full_path('txt/fiction/foreign/Dikkens/')
 # vern = create_full_path('txt/fiction/foreign/Vern/')
 #
@@ -35,27 +34,56 @@ scientific_books = create_full_path('txt/scientific/')
 # tolstoy = create_full_path('txt/fiction/russian/Tolstoy/')
 # turgenev = create_full_path('txt/fiction/russian/Turgenev/')
 
-texts_arr = scientific_books
-# texts_arr = (defoe + dikkens + vern) + (bulgakov + chehov + dostoevskiy + gogol + pushkin + tolstoy + turgenev)
+texts_arr = defoe
 
 for text in texts_arr:
-    all_texts += open(text, 'r').read().lower()
+    all_texts += open(text, 'r').read()
 
-print(all_texts)
+# print(all_texts)
 
-# 1. Adding the text
+
+# 2. Adding the text
 
 text = all_texts
 tokenized_text = sent_tokenize(text)
+tokenized_word_arr = []
 
-tokenized_word = word_tokenize(text)
+for sentence in tokenized_text:
+    tokenized_word = word_tokenize(sentence)
+    tokenized_word_arr.append(tokenized_word)
 
-# 2. Deleting punctuation signs
+tokenized_word_arr_without_tokenized = ''
+
+for sentence in tokenized_word_arr:
+    for word in tokenized_word_arr[sentence]:
+        tokenized_word_arr_without_tokenized += (word + ' ')
+
+print(tokenized_word_arr_without_tokenized)
 
 tokenizer = RegexpTokenizer(r'\w+')
-text_without_punctuation_signs = tokenizer.tokenize(text)
 
-# 3. Deleting stop-words
+text_without_punctuation_signs = tokenizer.tokenize(tokenized_word_arr[0])
+print(text_without_punctuation_signs)
+
+# print(text_without_punctuation_signs[0])
+
+# for i in tokenized_word:
+#     tokenized_word_arr.append(tokenized_word[i])
+#
+# print(tokenized_word_arr)
+
+# tokenized_word = word_tokenize(text)
+# print(tokenized_word)
+
+
+# 3. Deleting punctuation signs
+
+# tokenizer = RegexpTokenizer(r'\w+')
+# text_without_punctuation_signs = tokenizer.tokenize(text)
+#
+# print(text_without_punctuation_signs)
+
+# 4. Deleting stop-words
 
 stop_words = stopwords.words('russian')
 stop_words.extend(['не', 'это', 'что', 'именно', 'эта', 'лишь', 'очень', 'либо', 'или', 'ru', 'которые', 'конец',
@@ -69,11 +97,16 @@ for w in text_without_punctuation_signs:
     if w not in stop_words:
         filtered_sent.append(w)
 
-# 4. Calculating TOP-words
+
+# 5. Calculating TOP-words
 
 fdist = FreqDist(filtered_sent)
 
-result = fdist.most_common(500)
+result = fdist.most_common(50)
 
-for item in result:
-    print(item)
+# print(result)
+
+
+# 6. Selecting analysis indicators
+
+words_number_in_sentences_median = 1
