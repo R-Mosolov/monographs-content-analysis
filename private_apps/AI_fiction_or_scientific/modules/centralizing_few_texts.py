@@ -15,18 +15,8 @@ def centralization():
     all_texts = ''
 
     defoe = create_full_path('txt/fiction/foreign/Defoe/')
-    dikkens = create_full_path('txt/fiction/foreign/Dikkens/')
-    vern = create_full_path('txt/fiction/foreign/Vern/')
 
-    bulgakov = create_full_path('txt/fiction/russian/Bulgakov/')
-    chehov = create_full_path('txt/fiction/russian/Chehov/')
-    dostoevskiy = create_full_path('txt/fiction/russian/Dostoevskiy/')
-    gogol = create_full_path('txt/fiction/russian/Gogol/')
-    pushkin = create_full_path('txt/fiction/russian/Pushkin/')
-    tolstoy = create_full_path('txt/fiction/russian/Tolstoy/')
-    turgenev = create_full_path('txt/fiction/russian/Turgenev/')
-
-    texts_arr = (defoe + dikkens + vern) + (bulgakov + chehov + dostoevskiy + gogol + pushkin + tolstoy + turgenev)
+    texts_arr = defoe
 
     for text in texts_arr:
         all_texts += open(text, 'r').read()
