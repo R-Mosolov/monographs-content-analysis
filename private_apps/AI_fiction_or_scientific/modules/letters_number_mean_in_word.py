@@ -42,4 +42,4 @@ def get():
         letters_number_arr.append(len(word))
 
     # Getting result
-    return str(round(statistics.mean(letters_number_arr), 2))
+    return round(statistics.mean(letters_number_arr), 2)

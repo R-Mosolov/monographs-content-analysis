@@ -5,6 +5,7 @@ from modules import punctuation_signs_number_in_text
 from modules import relative_punctuation_signs_number_in_text
 from modules import words_number_mean_in_sentence
 from modules import letters_number_mean_in_word
+from modules import recording_the_result
 
 
 # 1. CENTRALIZING FEW TEXTS
@@ -31,3 +32,7 @@ print('5. Среднее число слов в предложении (ед.): 
 
 # 2.6. Getting average letters number in a word
 print('6. Среднее число букв в слове (ед.): ' + str(letters_number_mean_in_word.get()))
+
+
+# 3. Recording the analysis result
+recording_the_result.record()

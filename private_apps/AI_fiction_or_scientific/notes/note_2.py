@@ -1,9 +1,9 @@
 import os
 
-chehov_path = '../txt/fiction/russian/Chehov/'
-chehov = [chehov_path + 'Chehov_A._Chelovek_V_Futlyare_Sbornik.txt',
-          chehov_path + 'Chehov_A._Polnoesobranie._Sobranie_Yumoristicheskih.txt',
-          chehov_path + 'Chehov_A._Spisokshkolnoy._Vishnevyiyi_Sad.txt']
+chehov_path = '../dataset/fiction/russian/Chehov/'
+chehov = [chehov_path + 'Chehov_A._Chelovek_V_Futlyare_Sbornik.dataset',
+          chehov_path + 'Chehov_A._Polnoesobranie._Sobranie_Yumoristicheskih.dataset',
+          chehov_path + 'Chehov_A._Spisokshkolnoy._Vishnevyiyi_Sad.dataset']
 
 
 def create_full_path(path_link):
@@ -20,4 +20,4 @@ def create_full_path(path_link):
 # handler(chehov_path)
 
 print(chehov)
-print(create_full_path('../txt/fiction/russian/Chehov/'))
+print(create_full_path('../dataset/fiction/russian/Chehov/'))

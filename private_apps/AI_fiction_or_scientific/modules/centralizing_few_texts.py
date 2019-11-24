@@ -14,7 +14,7 @@ def centralization():
 
     all_texts = ''
 
-    defoe = create_full_path('txt/fiction/foreign/Defoe/')
+    defoe = create_full_path('dataset/fiction/foreign/Defoe/')
 
     texts_arr = defoe
 
