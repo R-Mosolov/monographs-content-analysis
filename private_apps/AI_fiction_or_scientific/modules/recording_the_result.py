@@ -1,4 +1,5 @@
 from openpyxl import Workbook
+from openpyxl.styles import Font
 
 from modules import sentences_number_in_text
 from modules import words_number_in_text
@@ -11,6 +12,14 @@ from modules import letters_number_mean_in_word
 def record():
     wb = Workbook()
     ws = wb.active
+
+    # Style
+
+    ws['A1'].font = Font(bold=True)
+    ws['B1'].font = Font(bold=True)
+    ws['C1'].font = Font(bold=True)
+
+    # Structure
 
     ws['A1'] = 'Индикатор'
     ws['B1'] = 'Худ. книги'
@@ -40,5 +49,5 @@ def record():
     ws['B7'] = letters_number_mean_in_word.get()
     ws['C7'] = 'Cell is empty'
 
-    wb.save("result.xlsx")
+    wb.save("result_fiction.xlsx")
     print('Результат анализа успешно записан в файл!')
