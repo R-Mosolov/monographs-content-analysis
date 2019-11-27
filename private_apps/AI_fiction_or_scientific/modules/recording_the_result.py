@@ -49,5 +49,5 @@ def record():
     ws['B7'] = letters_number_mean_in_word.get()
     ws['C7'] = 'Cell is empty'
 
-    wb.save("result_fiction.xlsx")
+    wb.save("result_new.xlsx")
     print('Результат анализа успешно записан в файл!')

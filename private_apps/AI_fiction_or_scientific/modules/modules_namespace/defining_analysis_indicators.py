@@ -7,3 +7,4 @@
 # words_number_mean_in_sentence
 # letters_number_mean_in_word
 # words_markers
+# adjective_number_mean_in_sentence
