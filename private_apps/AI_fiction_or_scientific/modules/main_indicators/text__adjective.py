@@ -8,7 +8,7 @@ from modules.preparation import centralize_texts
 
 def get():
     # Coping data from the other function
-    text = centralize_texts.centralization().lower()
+    text = centralize_texts.run().lower()
     tokenized_text = sent_tokenize(text)
 
     tokenized_word_arr = []
@@ -53,5 +53,5 @@ def get():
                 or word[0] == 'к' and word[1] == 'а' and word[2] == 'к':
             adjectives.remove(word)
 
-    # Getting result
+    # Getting the result
     return len(adjectives)

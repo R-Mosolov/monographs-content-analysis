@@ -8,7 +8,7 @@ from modules.preparation import centralize_texts
 
 def get():
     # Coping data from the other function
-    text = centralize_texts.centralization().lower()
+    text = centralize_texts.run().lower()
     tokenized_text = sent_tokenize(text)
 
     tokenized_word_arr = []
@@ -34,8 +34,8 @@ def get():
         if word not in stop_words:
             filtered_sent.append(word)
 
-    for word in filtered_sent:
-        print(word)
+    # for word in filtered_sent:
+    #     print(word)
 
     # # Searching numbers in the text
     # numbers = []
@@ -48,5 +48,5 @@ def get():
     #
     # print(numbers)
 
-    # Getting result
+    # Getting the result
     # return len(numbers)

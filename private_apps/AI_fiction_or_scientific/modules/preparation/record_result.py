@@ -10,7 +10,7 @@ from modules.main_indicators import sentence__word
 from modules.main_indicators import word__letter
 
 
-def record():
+def run():
     wb = Workbook()
     ws = wb.active
 

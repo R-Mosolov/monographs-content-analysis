@@ -7,7 +7,7 @@ from modules.preparation import centralize_texts
 
 def get():
     # Coping data from the other function
-    text = centralize_texts.centralization()
+    text = centralize_texts.run()
     tokenized_text = sent_tokenize(text)
 
     tokenized_word_arr = []
@@ -20,5 +20,5 @@ def get():
     tokenizer = RegexpTokenizer(r'\w+')
     text_without_punctuation_signs = tokenizer.tokenize(text)
 
-    # Getting result
+    # Getting the result
     return len(text_without_punctuation_signs)

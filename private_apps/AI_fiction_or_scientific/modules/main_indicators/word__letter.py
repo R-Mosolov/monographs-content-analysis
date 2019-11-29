@@ -9,7 +9,7 @@ from modules.preparation import centralize_texts
 
 def get():
     # Coping data from the other function
-    text = centralize_texts.centralization()
+    text = centralize_texts.run()
     tokenized_text = sent_tokenize(text)
 
     tokenized_word_arr = []
@@ -41,5 +41,5 @@ def get():
     for word in filtered_sent:
         letters_number_arr.append(len(word))
 
-    # Getting result
+    # Getting the result
     return round(statistics.mean(letters_number_arr), 2)

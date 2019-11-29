@@ -6,7 +6,7 @@ from modules.preparation import centralize_texts
 
 def adding():
     # Coping data from the other function
-    text = centralize_texts.centralization()
+    text = centralize_texts.run()
     tokenized_text = sent_tokenize(text)
 
     tokenized_word_arr = []
@@ -20,5 +20,5 @@ def adding():
     for word in tokenized_word_arr:
         tokenized_word_arr_without_tokenized += (word + ' ')
 
-    # Getting result
+    # Getting the result
     return tokenized_word_arr_without_tokenized
