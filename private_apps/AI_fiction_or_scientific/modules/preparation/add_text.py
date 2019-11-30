@@ -20,5 +20,5 @@ def adding():
     for word in tokenized_word_arr:
         tokenized_word_arr_without_tokenized += (word + ' ')
 
-    # Getting the result
+    # Returning the result
     return tokenized_word_arr_without_tokenized

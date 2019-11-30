@@ -5,7 +5,7 @@ from nltk.tokenize import RegexpTokenizer
 from modules.preparation import centralize_texts
 
 
-def get():
+def calc():
     # Coping data from the other function
     text = centralize_texts.run()
     tokenized_text = sent_tokenize(text)
@@ -21,5 +21,5 @@ def get():
     tokenizer = RegexpTokenizer(r'\w+')
     text_without_punctuation_signs = tokenizer.tokenize(text)
 
-    # Getting the result
+    # Calculating the result
     return len(text_with_punctuation_signs) - len(text_without_punctuation_signs)

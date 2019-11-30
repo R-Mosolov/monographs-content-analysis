@@ -6,7 +6,7 @@ from nltk.tokenize import RegexpTokenizer
 from modules.preparation import centralize_texts
 
 
-def get():
+def calc():
     # Coping data from the other function
     text = centralize_texts.run().lower()
     tokenized_text = sent_tokenize(text)
@@ -48,5 +48,5 @@ def get():
     #
     # print(numbers)
 
-    # Getting the result
+    # Calculating the result
     # return len(numbers)

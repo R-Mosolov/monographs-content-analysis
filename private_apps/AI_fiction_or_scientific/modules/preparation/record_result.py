@@ -27,27 +27,27 @@ def run():
     ws['C1'] = 'Науч. книги'
 
     ws['A2'] = 'Количество предложений в тексте (ед.)'
-    ws['B2'] = text__sentence.get()
+    ws['B2'] = text__sentence.calc()
     ws['C2'] = 'Cell is empty'
 
     ws['A3'] = 'Количество слов в тексте (ед.)'
-    ws['B3'] = text__word.get()
+    ws['B3'] = text__word.calc()
     ws['C3'] = 'Cell is empty'
 
     ws['A4'] = 'Абсолютное количество знаков препинаний в тексте (ед.)'
-    ws['B4'] = text__sign_abs.get()
+    ws['B4'] = text__sign_abs.calc()
     ws['C4'] = 'Cell is empty'
 
     ws['A5'] = 'Относительное количество знаков препинаний в тексте (%)'
-    ws['B5'] = text__sign_rel.get()
+    ws['B5'] = text__sign_rel.calc()
     ws['C5'] = 'Cell is empty'
 
     ws['A6'] = 'Среднее число слов в предложении (ед.)'
-    ws['B6'] = sentence__word.get()
+    ws['B6'] = sentence__word.calc()
     ws['C6'] = 'Cell is empty'
 
     ws['A7'] = 'Среднее число букв в слове (ед.)'
-    ws['B7'] = word__letter.get()
+    ws['B7'] = word__letter.calc()
     ws['C7'] = 'Cell is empty'
 
     wb.save("result_new.xlsx")

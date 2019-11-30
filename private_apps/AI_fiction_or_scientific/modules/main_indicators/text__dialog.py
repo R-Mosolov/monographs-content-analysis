@@ -1,11 +1,10 @@
 from nltk.tokenize import sent_tokenize
 from nltk.tokenize import word_tokenize
-from nltk.tokenize import RegexpTokenizer
 
 from modules.preparation import centralize_texts
 
 
-def get():
+def calc():
     # Separating texts on sentences
     text = centralize_texts.run()
     tokenized_text = sent_tokenize(text)
@@ -28,5 +27,5 @@ def get():
             if sentence[1][0] not in stop_words:
                 dialogs.append(sentence)
 
-    # Getting the result
+    # Calculating the result
     return len(dialogs)
