@@ -2,6 +2,7 @@ from nltk.tokenize import sent_tokenize
 from nltk.tokenize import word_tokenize
 
 from modules.preparation import centralize_texts
+from modules.additional_indicators import text__word
 
 
 def calc():
@@ -27,5 +28,8 @@ def calc():
             if sentence[1][0] not in stop_words:
                 dialogs.append(sentence)
 
+    # Calculating a relative indicator
+    relative_indicator = round(len(dialogs) * 100 / text__word.calc(), 2)
+
     # Calculating the result
-    return len(dialogs)
+    return relative_indicator

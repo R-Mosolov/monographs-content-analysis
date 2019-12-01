@@ -1,10 +1,9 @@
-from nltk.tokenize import sent_tokenize
-from nltk.tokenize import word_tokenize
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 
 from modules.preparation import centralize_texts
+from modules.additional_indicators import text__word
 
 
 def calc(analysed_word):
@@ -32,17 +31,24 @@ def calc(analysed_word):
     fdist = FreqDist(filtered_sent)
     top_words = fdist.most_common(1000)
 
-    # Calculating the result
-    returning_result = ''
+    # Calculating frequency of the marker word
+    returned_result = ''
 
     for word in top_words:
         word_value = word[0]
         word_freq = word[1]
 
         if word_value == analysed_word:
-            returning_result = word_freq
+            returned_result = word_freq
 
-    if returning_result == '':
-        returning_result = 'The word is not find'
+    if returned_result == '':
+        returned_result = 'The word is not find'
 
-    return returning_result
+    # Calculating a relative indicator of the marker word
+    relative_indicator = 0
+
+    if returned_result != 'The word is not find':
+        relative_indicator = returned_result * 100 / text__word.calc()
+
+    # Calculating the result
+    return round(relative_indicator, 3)

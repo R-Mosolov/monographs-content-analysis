@@ -4,6 +4,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import RegexpTokenizer
 
 from modules.preparation import centralize_texts
+from modules.additional_indicators import text__word
 
 
 def calc():
@@ -53,5 +54,8 @@ def calc():
                 or word[0] == 'к' and word[1] == 'а' and word[2] == 'к':
             adjectives.remove(word)
 
+    # Calculating a relative indicator
+    relative_indicator = round(len(adjectives) * 100 / text__word.calc(), 2)
+
     # Calculating the result
-    return len(adjectives)
+    return relative_indicator

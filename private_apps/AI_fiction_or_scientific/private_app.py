@@ -20,52 +20,52 @@ centralize_texts.run()
 
 # 2. GETTING MAIN AND ADDITIONAL ANALYSIS INDICATORS
 print('РЕЗУЛЬТАТ АНАЛИЗА')
-
-# 2.1. Getting sentences number in text(s)
-print('1. Количество предложений в тексте(-ах) (ед.): ' + str(text__sentence.calc()))
-
-# 2.2. Getting words number in text(s)
-print('2. Количество слов в тексте(-ах) (ед.): ' + str(text__word.calc()))
-
-# 2.3. Getting punctuation signs number in text(s)
-print('3. Абсолютное количество знаков препинаний в тексте(-ах) (ед.): ' + str(text__sign_abs.calc()))
-
-# 2.4. Getting punctuation signs number in text(s)
-print('4. Относительное количество знаков препинаний в тексте(-ах) (%): ' + str(text__sign_rel.calc()))
-
-# 2.5. Getting words number mean in a sentence
-print('5. Среднее число слов в предложении (ед.): ' + str(sentence__word.calc()))
-
-# 2.6. Getting letters number mean in a word
-print('6. Среднее число букв в слове (ед.): ' + str(word__letter.calc()))
+#
+# # 2.1. Getting sentences number in text(s)
+# print('1. Количество предложений: ' + str(text__sentence.calc()) + ' ед./текс.')
+#
+# # 2.2. Getting words number in text(s)
+# print('2. Количество слов: ' + str(text__word.calc()) + ' ед./текс.')
+#
+# # 2.3. Getting punctuation signs number in text(s)
+# print('3. Абсолютное число знаков препинаний: ' + str(text__sign_abs.calc()) + ' ед./текс.')
+#
+# # 2.4. Getting punctuation signs number in text(s)
+# print('4. Относительное число знаков препинаний: ' + str(text__sign_rel.calc()) + ' %/текст.')
+#
+# # 2.5. Getting words number mean in a sentence
+# print('5. Среднее число слов: ' + str(sentence__word.calc()) + ' ед./пред.')
+#
+# # 2.6. Getting letters number mean in a word
+# print('6. Среднее число букв: ' + str(word__letter.calc()) + ' ед./текс.')
 
 # 2.7. Getting adjectives number mean in text(s)
-print('7. Среднее количество прилагательных в тексте(-ах) (ед.): ' + str(text__adjective.calc()))
+print('7. Среднее количество прилагательных: ' + str(text__adjective.calc()) + ' %/текс.')
 
-# 2.8. Getting number of number mean in text(s)
-print('8. Среднее количество чисел в тексте(-ах) (ед.): ' + str(text__number.calc()))
+# # 2.8. Getting number of number mean in text(s)
+# print('8. Среднее количество чисел: ' + str(text__number.calc()) + ' ед./текс.')
+#
+# # 2.9. Getting mean of dialog signs number in text(s)
+# print('9. Среднее количество знаков диалога: ' + str(text__dialog.calc()) + ' %/текс.')
+#
+# # 2.10. GETTING MEAN OF MARKER WORDS NUMBER IN TEXT(S)
+# print('10. АНАЛИЗ СЛОВ-МАРКЕРОВ')
+#
+# # 2.10.1. Getting mean of dialog signs number in text(s)
+# print('10.1. Среднее число слова-маркера "сказал": ' + str(text__marker.calc('сказал')) + ' %/текс.')
+#
+# # 2.10.2. Getting mean of dialog signs number in text(s)
+# print('10.2. Среднее число слова-маркера "сказала": ' + str(text__marker.calc('сказала')) + ' %/текс.')
+#
+# # 2.10.3. Getting mean of dialog signs number in text(s)
+# print('10.3. Среднее число слова-маркера "говорит": ' + str(text__marker.calc('говорит')) + ' %/текс.')
+#
+# # 2.10.4. Getting mean of dialog signs number in text(s)
+# print('10.4. Среднее число слова-маркера "говорил": ' + str(text__marker.calc('говорил')) + ' %/текс.')
+#
+# # 2.10.5. Getting mean of dialog signs number in text(s)
+# print('10.5. Среднее число слова-маркера "спросил": ' + str(text__marker.calc('спросил')) + ' %/текс.')
 
-# 2.9. Getting mean of dialog signs number in text(s)
-# print('9. Среднее количество знаков начала диалога в тексте(-ах) (ед.): ' + str(text__dialog.calc()))
 
-
-# 2.10. Getting mean of marker words number in text(s)
-
-# 2.10.1. Getting mean of dialog signs number in text(s)
-print('10.1. Среднее количество слова-маркера "сказал" в тексте(-ах) (ед.): ' + str(text__marker.calc('сказал')))
-
-# 2.10.2. Getting mean of dialog signs number in text(s)
-print('10.2. Среднее количество слова-маркера "сказала" в тексте(-ах) (ед.): ' + str(text__marker.calc('сказала')))
-
-# 2.10.3. Getting mean of dialog signs number in text(s)
-print('10.3. Среднее количество слова-маркера "говорит" в тексте(-ах) (ед.): ' + str(text__marker.calc('говорит')))
-
-# 2.10.4. Getting mean of dialog signs number in text(s)
-print('10.4. Среднее количество слова-маркера "говорил" в тексте(-ах) (ед.): ' + str(text__marker.calc('говорил')))
-
-# 2.10.5. Getting mean of dialog signs number in text(s)
-print('10.5. Среднее количество слова-маркера "спросил" в тексте(-ах) (ед.): ' + str(text__marker.calc('спросил')))
-
-
-# 3. Recording the analysis result
-record_result.run()
+# # 3. Recording the analysis result
+# record_result.run()
