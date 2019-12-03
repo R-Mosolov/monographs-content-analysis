@@ -31,7 +31,7 @@ print('2. Количество слов: ' + str(text__word.calc()) + ' ед./т
 print('3. Абсолютное число знаков препинания: ' + str(text__sign_abs.calc()) + ' ед./текс.')
 
 # 2.4. Getting punctuation signs number in text(s)
-print('4. Относительное число знаков препинания: ' + str(text__sign_rel.calc()) + ' %/текст.')
+print('4. Относительное число знаков препинания: ' + str(text__sign_rel.calc()) + ' %/текс.')
 
 # 2.5. Getting words number mean in a sentence
 print('5. Среднее число слов: ' + str(sentence__word.calc()) + ' ед./пред.')
@@ -40,10 +40,10 @@ print('5. Среднее число слов: ' + str(sentence__word.calc()) + '
 print('6. Среднее число букв: ' + str(word__letter.calc()) + ' ед./текс.')
 
 # 2.7. Getting adjectives number mean in text(s)
-print('7. Среднее число прилагательных: ' + str(text__adjective.calc()) + ' %/текс.')
+print('7. (ПОДСЧЕТ НЕ КОРРЕКТЕН) Среднее число прилагательных: ' + str(text__adjective.calc()) + ' %/текс.')
 
 # 2.8. Getting number of number mean in text(s)
-print('8. Среднее число цифр: ' + str(text__number.calc()) + ' ед./текс.')
+print('8. (ПОДСЧЕТ НЕ КОРРЕКТЕН) Среднее число цифр: ' + str(text__number.calc()) + ' ед./текс.')
 
 # 2.9. Getting mean of dialog signs number in text(s)
 print('9. Среднее число знаков диалога: ' + str(text__dialog.calc()) + ' %/текс.')
