@@ -2,8 +2,8 @@ from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 
-from modules.preparation import centralize_texts
-from modules.additional_indicators import text__word
+from private_apps.AI_fiction_or_scientific.modules.preparation import centralize_texts
+from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__word
 
 
 def calc(analysed_word):

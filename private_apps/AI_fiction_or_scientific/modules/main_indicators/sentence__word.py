@@ -1,5 +1,5 @@
-from modules.additional_indicators import text__sentence
-from modules.additional_indicators import text__word
+from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__sentence
+from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__word
 
 
 def calc():

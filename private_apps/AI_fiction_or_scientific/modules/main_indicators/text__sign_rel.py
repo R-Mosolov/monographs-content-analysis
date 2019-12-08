@@ -1,5 +1,5 @@
-from modules.additional_indicators import text__word
-from modules.additional_indicators import text__sign_abs
+from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__word
+from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__sign_abs
 
 
 def calc():

@@ -1,20 +1,18 @@
-from modules.preparation import centralize_texts
+from private_apps.AI_fiction_or_scientific.modules.preparation import centralize_texts
 
-from modules.additional_indicators import text__sentence
-from modules.additional_indicators import text__word
-from modules.additional_indicators import text__sign_abs
+from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__sentence
+from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__word
+from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__sign_abs
 
-from modules.main_indicators import text__sign_rel
-from modules.main_indicators import sentence__word
-from modules.main_indicators import word__letter
-from modules.main_indicators import text__adjective
-from modules.main_indicators import text__number
-from modules.main_indicators import text__dialog
-from modules.main_indicators import text__marker
+from private_apps.AI_fiction_or_scientific.modules.main_indicators import text__sign_rel
+from private_apps.AI_fiction_or_scientific.modules.main_indicators import sentence__word
+from private_apps.AI_fiction_or_scientific.modules.main_indicators import word__letter
+from private_apps.AI_fiction_or_scientific.modules.main_indicators import text__adjective
+from private_apps.AI_fiction_or_scientific.modules.main_indicators import text__number
+from private_apps.AI_fiction_or_scientific.modules.main_indicators import text__dialog
+from private_apps.AI_fiction_or_scientific.modules.main_indicators import text__marker
 
-from modules.results import result_recorder
-from modules.results import result_generator
-
+from private_apps.AI_fiction_or_scientific.modules.results import result_recorder
 
 
 # 1. CENTRALIZING FEW TEXTS
@@ -72,4 +70,3 @@ print('10.5. Среднее число слова-маркера "спросил
 
 # 3. Recording the analysis result
 result_recorder.run()
-# result_generator.run()

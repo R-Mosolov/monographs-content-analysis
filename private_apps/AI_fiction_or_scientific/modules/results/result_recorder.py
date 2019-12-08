@@ -1,13 +1,13 @@
 from openpyxl import Workbook
 from openpyxl.styles import Font
 
-from modules.additional_indicators import text__sentence
-from modules.additional_indicators import text__word
-from modules.additional_indicators import text__sign_abs
+from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__sentence
+from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__word
+from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__sign_abs
 
-from modules.main_indicators import text__sign_rel
-from modules.main_indicators import sentence__word
-from modules.main_indicators import word__letter
+from private_apps.AI_fiction_or_scientific.modules.main_indicators import text__sign_rel
+from private_apps.AI_fiction_or_scientific.modules.main_indicators import sentence__word
+from private_apps.AI_fiction_or_scientific.modules.main_indicators import word__letter
 
 
 def run():

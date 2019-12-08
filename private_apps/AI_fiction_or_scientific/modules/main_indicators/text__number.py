@@ -3,7 +3,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.tokenize import RegexpTokenizer
 
-from modules.preparation import centralize_texts
+from private_apps.AI_fiction_or_scientific.modules.preparation import centralize_texts
 
 
 def calc():

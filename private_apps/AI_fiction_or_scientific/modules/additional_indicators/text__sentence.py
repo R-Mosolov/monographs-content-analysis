@@ -1,6 +1,6 @@
 from nltk.tokenize import sent_tokenize
 
-from modules.preparation import centralize_texts
+from private_apps.AI_fiction_or_scientific.modules.preparation import centralize_texts
 
 
 def calc():
