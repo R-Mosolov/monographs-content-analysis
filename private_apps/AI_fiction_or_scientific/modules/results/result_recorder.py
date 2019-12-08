@@ -50,5 +50,5 @@ def run():
     ws['B7'] = word__letter.calc()
     ws['C7'] = 'Cell is empty'
 
-    wb.save("result_new.xlsx")
+    wb.save('modules/results/result_new.xlsx')
     print('Результат анализа успешно записан в файл!')

@@ -1,5 +1,4 @@
 from modules.preparation import centralize_texts
-from modules.preparation import record_result
 
 from modules.additional_indicators import text__sentence
 from modules.additional_indicators import text__word
@@ -12,6 +11,8 @@ from modules.main_indicators import text__adjective
 from modules.main_indicators import text__number
 from modules.main_indicators import text__dialog
 from modules.main_indicators import text__marker
+
+from modules.results import record_result
 
 
 # 1. CENTRALIZING FEW TEXTS
@@ -67,5 +68,5 @@ print('10.4. Среднее число слова-маркера "говорил
 print('10.5. Среднее число слова-маркера "спросил": ' + str(text__marker.calc('спросил')) + ' %/текс.')
 
 
-# # 3. Recording the analysis result
-# record_result.run()
+# 3. Recording the analysis result
+record_result.run()
