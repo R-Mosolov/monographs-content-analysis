@@ -12,7 +12,9 @@ from modules.main_indicators import text__number
 from modules.main_indicators import text__dialog
 from modules.main_indicators import text__marker
 
-from modules.results import record_result
+from modules.results import result_recorder
+from modules.results import result_generator
+
 
 
 # 1. CENTRALIZING FEW TEXTS
@@ -69,4 +71,5 @@ print('10.5. Среднее число слова-маркера "спросил
 
 
 # 3. Recording the analysis result
-record_result.run()
+result_recorder.run()
+# result_generator.run()
