@@ -10,11 +10,6 @@ def run():
     scientific_mean = scientific_indicators.SENTENCE__WORD
     fiction_and_scientific_mean = mean_calculator.run()[1]
 
-    print(['Показатель проанализированного текста: ' + str(analyzed_text),
-           'Среднее худ. книг: ' + str(fiction_mean),
-           'Среднее науч. книг: ' + str(scientific_mean),
-           'Среднее между константами: ' + str(fiction_and_scientific_mean)])
-
     if fiction_mean > scientific_mean:
         if analyzed_text > (fiction_mean - fiction_and_scientific_mean):
             is_fiction_text = True
@@ -27,8 +22,6 @@ def run():
             is_fiction_text = True
 
     if is_fiction_text:
-        print('Проанализированный текст – художественный')
+        return 1
     else:
-        print('Проанализированный текст – научный')
-
-run()
+        return 0

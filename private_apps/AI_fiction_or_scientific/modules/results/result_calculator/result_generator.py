@@ -25,11 +25,19 @@ def run():
                           text__marker_sprosil.run()]
 
     results_arr = []
-
     for indicator in indicators_results:
         results_arr.append(indicator)
 
-    return results_arr
+    arr_elements_sum = 0
+    for indicator in results_arr:
+        arr_elements_sum += indicator
+
+    if arr_elements_sum >= 5:
+        analysis_solution = 'Результат анализа: текст является художественным!'
+    else:
+        analysis_solution = 'Результат анализа: текст является научным!'
+
+    return analysis_solution
 
 
 print(run())
