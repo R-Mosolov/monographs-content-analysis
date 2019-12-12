@@ -1,3 +1,5 @@
+# The project will work with Python 3.8
+
 from private_apps.AI_fiction_or_scientific.modules.preparation import centralize_texts
 
 from private_apps.AI_fiction_or_scientific.modules.additional_indicators import text__sentence
@@ -13,6 +15,7 @@ from private_apps.AI_fiction_or_scientific.modules.main_indicators import text__
 from private_apps.AI_fiction_or_scientific.modules.main_indicators import text__marker
 
 from private_apps.AI_fiction_or_scientific.modules.results import result_recorder
+from private_apps.AI_fiction_or_scientific.modules.results.result_calculator import result_generator
 
 
 # 1. CENTRALIZING FEW TEXTS
@@ -68,5 +71,8 @@ print('10.4. Среднее число слова-маркера "говорил
 print('10.5. Среднее число слова-маркера "спросил": ' + str(text__marker.calc('спросил')) + ' %/текс.')
 
 
-# 3. Recording the analysis result
+# 3. Generating the analysis solution
+print(result_generator.run())
+
+# 4. Recording the analysis result
 result_recorder.run()

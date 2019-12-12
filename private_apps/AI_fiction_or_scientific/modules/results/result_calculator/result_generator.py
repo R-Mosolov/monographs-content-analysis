@@ -38,6 +38,3 @@ def run():
         analysis_solution = 'Результат анализа: текст является научным!'
 
     return analysis_solution
-
-
-print(run())
